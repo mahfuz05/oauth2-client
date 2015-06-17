@@ -1,5 +1,5 @@
 <?php
-namespace OAuth2\GrantType;
+namespace Mahfuz05\LaravelOauth2\GrantType;
 /**
  * Specific GrantType Interface
  */

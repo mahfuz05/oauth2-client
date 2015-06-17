@@ -1,7 +1,7 @@
 <?php
-namespace OAuth2\GrantType;
+namespace Mahfuz05\LaravelOauth2\GrantType;
 
-use OAuth2\InvalidArgumentException;
+use Mahfuz05\LaravelOauth2\Exceptions\InvalidArgumentException;
 
 /**
  * Authorization code  Grant Type Validator
