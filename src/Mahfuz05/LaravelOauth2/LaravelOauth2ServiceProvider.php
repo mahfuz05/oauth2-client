@@ -29,7 +29,7 @@ class LaravelOauth2ServiceProvider extends ServiceProvider {
 	public function register()
 	{
         // Register 'oauth2'
-        $this->app['oauth2'] = $this->app->share(function($app)
+        $this->app['LaravelOauth2'] = $this->app->share(function($app)
         {
             $config = $app['config'];
             // create oAuth instance
