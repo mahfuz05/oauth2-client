@@ -24,7 +24,7 @@
  * @author      Anis Berejeb <anis.berejeb@gmail.com>
  * @version     1.2.0
  */
-namespace Mahfuz05;
+namespace Mahfuz05\LaravelOauth2;
 
 class LaravelOauth2
 {
