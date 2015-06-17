@@ -1,0 +1,23 @@
+{
+    "name": "mahfuz05/laravel-oauth2",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mahfuzur Rahman",
+            "email": "mahfuzcse05@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Mahfuz05\\LaravelOauth2\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
