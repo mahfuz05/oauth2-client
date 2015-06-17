@@ -9,7 +9,7 @@ namespace Mahfuz05\LaravelOauth2\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Oauth2ClientFacade extends Facade {
+class LaravelOauth2Facade extends Facade {
 
     /**
      * Get the registered name of the component
