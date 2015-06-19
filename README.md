@@ -94,7 +94,7 @@
 <h3>Or you can use like this</h3>
  <pre>
       <code>
-       <b>
+      
                 if (!isset($_GET['code']))
                 {
                     
@@ -117,8 +117,8 @@
         
                     $response = LaravelOauth2::fetch('https://api.debitoor.com/api/v1.0/customers');
                 }    
-       </b>
-      </code>
+       
+      
  </pre>
 
 <h2>4. Constants</h2>
