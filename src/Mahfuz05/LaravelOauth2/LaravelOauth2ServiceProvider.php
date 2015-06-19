@@ -29,13 +29,13 @@ class LaravelOauth2ServiceProvider extends ServiceProvider {
 	public function register()
 	{
         // Register 'oauth2'
-        $this->app['LaravelOauth2'] = $this->app->share(function($app)
+        $this->app['laraveloauth2'] = $this->app->share(function($app)
         {
             $config = $app['config'];
             // create oAuth instance
-            $oauth2 = new LaravelOauth2($config->get('config.client.id'), $config->get('config.client.secret'));
+            $laraveloauth2 = new LaravelOauth2($config->get('config.client.id'), $config->get('config.client.secret'));
             // return oAuth instance
-            return $oauth2;
+            return $laraveloauth2;
         });
 	}
 
