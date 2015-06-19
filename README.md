@@ -3,6 +3,7 @@
 <h1>Laravel OAuth2 - Client</h1>
 <p>
     This Package can be used to connect to an OAuth2-Service and fetch OAuth2 restricted resources.
+    this is Laravel OAuth rapper for https://github.com/adoy/PHP-OAuth2
 </p>
 
 <h2>1. Installation</h2>
@@ -63,7 +64,7 @@
 
     <code><b>'providers' => 'Mahfuz05\LaravelOauth2\LaravelOauth2ServiceProvider'</b></code>
     <br>
-    <code><b>'aliases' => 'LaravelOauth2'	=> 'Mahfuz05\LaravelOauth2\Facades\LaravelOauth2Facade'</b></code>
+    <code><b>'aliases' => 'LaravelOauth2'	=> 'Mahfuz05\LaravelOauth2\Facades\LaravelOauth2'</b></code>
 </p>
 
 <h2>3. Examples</h2>
@@ -89,6 +90,36 @@
     </b>
     </code>
 </pre>
+
+<h3>Or you can use like this</h3>
+ <pre>
+      <code>
+       <b>
+                if (!isset($_GET['code']))
+                {
+                    
+                    $auth_url = LaravelOauth2::getAuthenticationUrl($this->url, $this->redirectUri);
+                    header('Location: ' . $auth_url);
+                    die('Redirect');
+                }
+                else
+                {
+                    $params = array('code' => $_GET['code'], 'redirect_uri' => $this->redirectUri);
+                    
+                    $response = LaravelOauth2::getAccessToken($this->token_url, 'authorization_code', $params);
+        
+                    //get Access Token and store it
+                    
+                    LaravelOauth2::setAccessToken($response['result']['access_token']);
+                    $token = $response['result']['access_token'];
+        
+                    //get all customers
+        
+                    $response = LaravelOauth2::fetch('https://api.debitoor.com/api/v1.0/customers');
+                }    
+       </b>
+      </code>
+ </pre>
 
 <h2>4. Constants</h2>
 
